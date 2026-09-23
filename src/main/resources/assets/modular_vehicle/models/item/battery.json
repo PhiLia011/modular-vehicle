@@ -1,6 +1,6 @@
 {
-  ""parent"": ""minecraft:item/generated"",
-  ""textures"": {
-    ""layer0"": ""modular_vehicle:items/battery""
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "modular_vehicle:items/battery"
   }
 }

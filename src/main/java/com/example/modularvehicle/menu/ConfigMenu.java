@@ -2,6 +2,7 @@ package com.example.modularvehicle.menu;
 
 import com.example.modularvehicle.entity.CarEntity;
 import com.example.modularvehicle.entity.CarPart;
+import com.example.modularvehicle.entity.CarPart;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -85,7 +86,7 @@ public class ConfigMenu extends AbstractContainerMenu {
         config.append("座位数量: ").append(6).append("\n");
         config.append("燃料容量: ").append("100").append("\n");
         config.append("\n部件配置:\n");
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < CarPart.SLOT_COUNT; i++) {
             CarPart part = carEntity.getPart(i);
             var definition = carEntity.getPartDefinition(i);
             config.append(part.getType()).append(": ")
@@ -103,7 +104,7 @@ public class ConfigMenu extends AbstractContainerMenu {
         if (carEntity == null) return "兼容性信息不可用";
         StringBuilder compatibility = new StringBuilder("兼容性信息:\n");
         compatibility.append("\n部件兼容性:\n");
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < CarPart.SLOT_COUNT; i++) {
             var definition = carEntity.getPartDefinition(i);
             if (definition != null) {
                 compatibility.append(definition.getDisplayName()).append(": ");

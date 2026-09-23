@@ -2,6 +2,7 @@ package com.example.modularvehicle.menu;
 
 import com.example.modularvehicle.entity.CarEntity;
 import com.example.modularvehicle.entity.CarPart;
+import com.example.modularvehicle.entity.CarPart;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -83,7 +84,7 @@ public class CarStatusMenu extends AbstractContainerMenu {
         StringBuilder status = new StringBuilder("载具状态:\n");
         status.append("引擎: ").append(carEntity.isEngineRunning() ? "运行中" : "停止").append("\n");
         status.append("燃料: ").append(carEntity.getFuel()).append("/100\n");
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < CarPart.SLOT_COUNT; i++) {
             CarPart part = carEntity.getPart(i);
             status.append(part.getType()).append(": ")
                   .append(part.isInstalled() ? (part.isBroken() ? "损坏" : "正常") : "未安装")

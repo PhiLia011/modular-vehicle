@@ -1,25 +1,20 @@
 {
   "type": "wheel",
-  "displayName": "高性能轮子",
+  "displayName": "载具车轮",
   "maxDurability": 1000,
-  "weight": 25,
+  "weight": 40,
   "properties": {
-    "grip": 0.9,
-    "rollingResistance": 0.1
+    "gripMultiplier": 1.0
   },
   "collisionBox": {
-    "x": 0.3,
-    "y": 0.3,
-    "z": 0.3,
-    "offsetX": -0.75,
-    "offsetY": 0,
-    "offsetZ": -0.2
+    "x": 0.6, "y": 0.5, "z": 0.4,
+    "offsetX": 0, "offsetY": 0.3, "offsetZ": -0.5
   },
   "repairMaterials": {
-    "iron_ingot": 2,
-    "rubber": 1
+    "iron_ingot": 4,
+    "copper_ingot": 2
   },
-  "compatibleVehicles": ["basic_car", "sports_car", "truck"],
+  "compatibleVehicles": ["basic_car", "sports_car"],
   "texture": "modular_vehicle:items/wheel",
   "model": "modular_vehicle:item/wheel"
 }

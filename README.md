@@ -11,17 +11,17 @@ Minecraft **Forge 1.20.1**（47.4.10）模组：可拆装部件的模块化载�
 |---|---|---|
 | 编译 | ✅ `gradle build` 通过 | 产出 `build/libs/modular_vehicle-1.0.0.jar` |
 | 专用服务器启动 | ✅ 通过 | 日志 `Done (6.6s)`，无 ERROR |
-| 载具实体生成 | ✅ `summon modular_vehicle:car` 成功 | RCON 实测 |
+| 载具实体生成 | ✅ summon modular_vehicle:car 成功 | RCON 实测 |\n| 9 槽部件系统 | ✅ 引擎/车轮x4/外壳/座椅/油箱/电池，ItemStackHandler | data get entity 9 部件 NBT 验证 |\n| 6 种部件物品注册 | ✅ 创造物品栏可用 | summon item 逐个验证 |\n| 部件物品 NBT 往返 | ✅ inventory 标签存取 | data modify 实测 |
 | 部件 NBT 独立耐久 | ✅ 6 部件数据完整落盘 | `data get entity` 验证 |
 | 实体属性注册 | ✅ | EntityAttributeCreationEvent |
 | 网络通道 | ✅ SimpleChannel 注册 | 服务器日志无报错 |
 
 ## 尚未完成（TODO，对应需求文档）
 
-- [ ] 部件槽位接入 `ItemStackHandler` / Capability（当前为 SimpleContainer 占位，6 槽，需求为 9 槽：引擎/车轮x4/车身外壳/座椅/油箱/电池）
-- [ ] 拆装交互：潜行+右键拆卸（hitResult 部位判定）、手持部件右键安装
+- [x] 部件槽位 `ItemStackHandler` + Capability（9 槽：引擎/车轮x4/车身外壳/座椅/油箱/电池）
+- [x] 拆装交互：潜行+空手右键拆卸（视线射线-部件盒求交判定部位）、手持部件右键安装（服务端逻辑，待进游戏实测手感）
 - [ ] 分层渲染与耐久四档可视化（>75% 正常 / 50-75% 裂纹 / 25-50% 偏暗 / <25% 冒烟）
-- [ ] 拆轮后碰撞箱"塌陷"等动态碰撞联动
+- [x] 动态碰撞联动：部件碰撞盒按槽位组合；轮数渐进影响速度/转向/摩擦；油箱破损冒火伤害附近实体；无外壳乘客连带受伤
 - [ ] 部件状态变更的联机同步
 - [ ] 全部纹理为 0 字节占位（游戏内显示紫黑棋盘格，不崩溃）
 - [ ] `runClient` 客户端冒烟测试未跑

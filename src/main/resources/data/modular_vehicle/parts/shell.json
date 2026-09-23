@@ -1,10 +1,10 @@
 {
-  "type": "seat",
-  "displayName": "载具座椅",
-  "maxDurability": 500,
-  "weight": 25,
+  "type": "shell",
+  "displayName": "车身外壳",
+  "maxDurability": 2500,
+  "weight": 300,
   "properties": {
-    "comfortLevel": 1
+    "passengerProtection": 0.5
   },
   "collisionBox": {
     "x": 0.6, "y": 0.5, "z": 0.4,
@@ -15,6 +15,6 @@
     "copper_ingot": 2
   },
   "compatibleVehicles": ["basic_car", "sports_car"],
-  "texture": "modular_vehicle:items/seat",
-  "model": "modular_vehicle:item/seat"
+  "texture": "modular_vehicle:items/shell",
+  "model": "modular_vehicle:item/shell"
 }

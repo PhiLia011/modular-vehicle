@@ -7,6 +7,7 @@ import com.example.modularvehicle.command.PartDebugCommand;
 import com.example.modularvehicle.config.CarCollisionConfig;
 import com.example.modularvehicle.registry.ModBlocks;
 import com.example.modularvehicle.menu.ModMenuTypes;
+import com.example.modularvehicle.registry.ModCreativeTabs;
 import com.example.modularvehicle.registry.ModEntities;
 import com.example.modularvehicle.registry.ModEntityAttributes;
 import com.example.modularvehicle.registry.ModItems;
@@ -41,6 +42,7 @@ public class ModularVehicle {
         ModRecipes.register(modEventBus);
 
         // 注册菜单类型
+        ModCreativeTabs.register(modEventBus);
         ModMenuTypes.register(modEventBus);
 
         // 注册客户端渲染器

@@ -50,11 +50,11 @@ public class CarPartModel implements BakedModel {
             case BATTERY:
                 generateBatteryQuads();
                 break;
-            case TRUNK:
-                generateTrunkQuads();
+            case SHELL:
+                generateShellQuads();
                 break;
-            case LIGHT:
-                generateLightQuads();
+            case FUEL_TANK:
+                generateFuelTankQuads();
                 break;
         }
     }
@@ -79,12 +79,12 @@ public class CarPartModel implements BakedModel {
         addCube(0, 0, 0, 0.8f, 0.4f, 1.2f, 0.2f, 0.8f, 0.2f);
     }
 
-    private void generateTrunkQuads() {
+    private void generateShellQuads() {
         // 行李箱立方体
         addCube(0, 0, 0, 1, 0.8f, 1, 0.6f, 0.4f, 0.6f);
     }
 
-    private void generateLightQuads() {
+    private void generateFuelTankQuads() {
         // 灯光立方体
         addCube(0, 0, 0, 0.3f, 0.3f, 0.3f, 1.0f, 1.0f, 0.8f);
     }

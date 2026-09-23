@@ -2,14 +2,59 @@ package com.example.modularvehicle.entity;
 
 import net.minecraft.nbt.CompoundTag;
 
+/**
+ * 部件数据模型：类型、耐久、最大耐久、安装状态。
+ * 耐久独立存储在实体 NBT 中（需求文档第 6 项）。
+ */
 public class CarPart {
+
+    /** 部件类型（JSON 中的 type 字段使用小写名）。 */
     public enum PartType {
-        ENGINE,      // 引擎
-        WHEEL,       // 轮子
-        SEAT,        // 座位
-        BATTERY,     // 电池
-        TRUNK,       // 行李箱
-        LIGHT;       // 灯光
+        ENGINE("engine"),
+        WHEEL("wheel"),
+        SHELL("shell"),
+        SEAT("seat"),
+        FUEL_TANK("fuel_tank"),
+        BATTERY("battery");
+
+        private final String jsonType;
+
+        PartType(String jsonType) { this.jsonType = jsonType; }
+
+        public String getJsonType() { return jsonType; }
+
+        public static PartType fromJsonType(String jsonType) {
+            for (PartType t : values()) {
+                if (t.jsonType.equalsIgnoreCase(jsonType)) return t;
+            }
+            throw new IllegalArgumentException("未知部件类型: " + jsonType);
+        }
+    }
+
+    /** 槽位布局（需求文档：引擎/车轮x4/车身外壳/座椅/油箱/电池）。 */
+    public static final int SLOT_COUNT = 9;
+    public static final int SLOT_ENGINE = 0;
+    public static final int SLOT_WHEEL_FL = 1;
+    public static final int SLOT_WHEEL_FR = 2;
+    public static final int SLOT_WHEEL_RL = 3;
+    public static final int SLOT_WHEEL_RR = 4;
+    public static final int SLOT_SHELL = 5;
+    public static final int SLOT_SEAT = 6;
+    public static final int SLOT_FUEL_TANK = 7;
+    public static final int SLOT_BATTERY = 8;
+    public static final int[] WHEEL_SLOTS = {SLOT_WHEEL_FL, SLOT_WHEEL_FR, SLOT_WHEEL_RL, SLOT_WHEEL_RR};
+
+    /** 获取槽位对应的部件类型。 */
+    public static PartType partTypeForSlot(int slot) {
+        return switch (slot) {
+            case SLOT_ENGINE -> PartType.ENGINE;
+            case SLOT_WHEEL_FL, SLOT_WHEEL_FR, SLOT_WHEEL_RL, SLOT_WHEEL_RR -> PartType.WHEEL;
+            case SLOT_SHELL -> PartType.SHELL;
+            case SLOT_SEAT -> PartType.SEAT;
+            case SLOT_FUEL_TANK -> PartType.FUEL_TANK;
+            case SLOT_BATTERY -> PartType.BATTERY;
+            default -> throw new IllegalArgumentException("非法槽位: " + slot);
+        };
     }
 
     private final PartType type;
@@ -36,25 +81,11 @@ public class CarPart {
         return this.durability <= 0;
     }
 
-    public PartType getType() {
-        return type;
-    }
-
-    public int getDurability() {
-        return durability;
-    }
-
-    public int getMaxDurability() {
-        return maxDurability;
-    }
-
-    public boolean isInstalled() {
-        return installed;
-    }
-
-    public void setInstalled(boolean installed) {
-        this.installed = installed;
-    }
+    public PartType getType() { return type; }
+    public int getDurability() { return durability; }
+    public int getMaxDurability() { return maxDurability; }
+    public boolean isInstalled() { return installed; }
+    public void setInstalled(boolean installed) { this.installed = installed; }
 
     public void saveToNBT(CompoundTag tag) {
         tag.putString("type", type.name());

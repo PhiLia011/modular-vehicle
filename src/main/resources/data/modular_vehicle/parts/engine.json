@@ -9,12 +9,8 @@
     "fuelConsumption": 0.8
   },
   "collisionBox": {
-    "x": 0.6,
-    "y": 0.5,
-    "z": 0.4,
-    "offsetX": 0,
-    "offsetY": 0.3,
-    "offsetZ": -0.5
+    "x": 0.6, "y": 0.5, "z": 0.4,
+    "offsetX": 0, "offsetY": 0.3, "offsetZ": -0.5
   },
   "repairMaterials": {
     "iron_ingot": 4,

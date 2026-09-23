@@ -1,10 +1,11 @@
 {
-  "type": "seat",
-  "displayName": "载具座椅",
-  "maxDurability": 500,
-  "weight": 25,
+  "type": "fuel_tank",
+  "displayName": "油箱",
+  "maxDurability": 1200,
+  "weight": 60,
   "properties": {
-    "comfortLevel": 1
+    "capacity": 100,
+    "leakChance": 0.05
   },
   "collisionBox": {
     "x": 0.6, "y": 0.5, "z": 0.4,
@@ -15,6 +16,6 @@
     "copper_ingot": 2
   },
   "compatibleVehicles": ["basic_car", "sports_car"],
-  "texture": "modular_vehicle:items/seat",
-  "model": "modular_vehicle:item/seat"
+  "texture": "modular_vehicle:items/fuel_tank",
+  "model": "modular_vehicle:item/fuel_tank"
 }

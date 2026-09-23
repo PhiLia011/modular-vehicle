@@ -1,10 +1,11 @@
 {
-"item.modular_vehicle.engine": "引擎",
-"item.modular_vehicle.wheel": "轮子",
-"item.modular_vehicle.seat": "座位",
-"item.modular_vehicle.battery": "电池",
-"item.modular_vehicle.trunk": "行李箱",
-"item.modular_vehicle.light": "灯光",
-"block.modular_vehicle.workbench": "载具工作台",
-"itemGroup.modular_vehicle": "模块化载具"
+  "item.modular_vehicle.engine": "引擎",
+  "item.modular_vehicle.wheel": "载具车轮",
+  "item.modular_vehicle.shell": "车身外壳",
+  "item.modular_vehicle.seat": "载具座椅",
+  "item.modular_vehicle.fuel_tank": "油箱",
+  "item.modular_vehicle.battery": "蓄电池",
+  "block.modular_vehicle.workbench": "载具工作台",
+  "entity.modular_vehicle.car": "模块化载具",
+  "itemGroup.modular_vehicle": "模块化载具"
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "modular_vehicle:items/wheel"
+    "layer0": "modular_vehicle:items/shell"
   }
 }
