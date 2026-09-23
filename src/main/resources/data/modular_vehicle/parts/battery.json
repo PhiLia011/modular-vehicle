@@ -1,0 +1,27 @@
+{
+  "type": "battery",
+  "displayName": "锂电池",
+  "maxDurability": 1500,
+  "weight": 20,
+  "properties": {
+    "capacity": 100,
+    "chargeRate": 2.0,
+    "dischargeRate": 1.0
+  },
+  "collisionBox": {
+    "x": 0.8,
+    "y": 0.4,
+    "z": 1.2,
+    "offsetX": 0,
+    "offsetY": 0.2,
+    "offsetZ": 0.6
+  },
+  "repairMaterials": {
+    "redstone": 4,
+    "iron_ingot": 3,
+    "copper_ingot": 2
+  },
+  "compatibleVehicles": ["electric_car", "hybrid_car"],
+  "texture": "modular_vehicle:items/battery",
+  "model": "modular_vehicle:item/battery"
+}

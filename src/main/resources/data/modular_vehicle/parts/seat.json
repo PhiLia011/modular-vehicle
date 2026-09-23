@@ -1,0 +1,25 @@
+{
+  "type": "seat",
+  "displayName": "舒适座椅",
+  "maxDurability": 500,
+  "weight": 10,
+  "properties": {
+    "comfort": 0.8,
+    "storage": 5
+  },
+  "collisionBox": {
+    "x": 0.4,
+    "y": 0.4,
+    "z": 0.6,
+    "offsetX": 0.3,
+    "offsetY": 0.2,
+    "offsetZ": -0.3
+  },
+  "repairMaterials": {
+    "wool": 2,
+    "iron_ingot": 1
+  },
+  "compatibleVehicles": ["basic_car", "sports_car", "suv"],
+  "texture": "modular_vehicle:items/seat",
+  "model": "modular_vehicle:item/seat"
+}

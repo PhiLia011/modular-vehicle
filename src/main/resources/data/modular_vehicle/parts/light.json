@@ -1,0 +1,26 @@
+{
+  "type": "light",
+  "displayName": "LED大灯",
+  "maxDurability": 300,
+  "weight": 5,
+  "properties": {
+    "brightness": 1.0,
+    "color": "white",
+    "energyConsumption": 0.1
+  },
+  "collisionBox": {
+    "x": 0.3,
+    "y": 0.3,
+    "z": 0.3,
+    "offsetX": -0.7,
+    "offsetY": 0.6,
+    "offsetZ": -0.35
+  },
+  "repairMaterials": {
+    "glowstone_dust": 2,
+    "iron_nugget": 1
+  },
+  "compatibleVehicles": ["basic_car", "sports_car", "truck"],
+  "texture": "modular_vehicle:items/light",
+  "model": "modular_vehicle:item/light"
+}

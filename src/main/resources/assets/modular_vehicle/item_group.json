@@ -1,0 +1,23 @@
+{
+  "parent": "item_group",
+  "display": {
+    "icon": {
+      "item": "modular_vehicle:workbench"
+    },
+    "title": {
+      "translate": "itemGroup.modular_vehicle"
+    },
+    "description": {
+      "translate": "itemGroup.modular_vehicle.description"
+    }
+  },
+  "entries": [
+    "modular_vehicle:engine",
+    "modular_vehicle:wheel",
+    "modular_vehicle:seat",
+    "modular_vehicle:battery",
+    "modular_vehicle:trunk",
+    "modular_vehicle:light",
+    "modular_vehicle:workbench"
+  ]
+}

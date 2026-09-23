@@ -1,0 +1,25 @@
+{
+  "type": "wheel",
+  "displayName": "高性能轮子",
+  "maxDurability": 1000,
+  "weight": 25,
+  "properties": {
+    "grip": 0.9,
+    "rollingResistance": 0.1
+  },
+  "collisionBox": {
+    "x": 0.3,
+    "y": 0.3,
+    "z": 0.3,
+    "offsetX": -0.75,
+    "offsetY": 0,
+    "offsetZ": -0.2
+  },
+  "repairMaterials": {
+    "iron_ingot": 2,
+    "rubber": 1
+  },
+  "compatibleVehicles": ["basic_car", "sports_car", "truck"],
+  "texture": "modular_vehicle:items/wheel",
+  "model": "modular_vehicle:item/wheel"
+}

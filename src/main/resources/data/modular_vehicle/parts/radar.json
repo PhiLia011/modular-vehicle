@@ -1,0 +1,28 @@
+{
+  "comment": "示例部件配置 - 添加新的部件类型",
+  "type": "radar",
+  "displayName": "雷达探测器",
+  "maxDurability": 800,
+  "weight": 15,
+  "properties": {
+    "detectionRange": 20.0,
+    "scanSpeed": 1.0,
+    "energyConsumption": 0.5
+  },
+  "collisionBox": {
+    "x": 0.4,
+    "y": 0.2,
+    "z": 0.4,
+    "offsetX": 0,
+    "offsetY": 0.7,
+    "offsetZ": 0
+  },
+  "repairMaterials": {
+    "redstone": 3,
+    "glowstone_dust": 2,
+    "iron_ingot": 1
+  },
+  "compatibleVehicles": ["military_car", "police_car"],
+  "texture": "modular_vehicle:items/radar",
+  "model": "modular_vehicle:item/radar"
+}

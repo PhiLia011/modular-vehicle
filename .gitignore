@@ -1,0 +1,21 @@
+# 构建产物与本地环境
+build/
+.gradle/
+work/
+run/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.eclipse/
+.classpath
+.project
+.settings/
+
+# 系统文件
+Thumbs.db
+.Desktop.ini
+
+outputs/

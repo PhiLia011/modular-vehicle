@@ -1,0 +1,41 @@
+{
+  "collision": {
+    "base_speed": 1.0,
+    "engine_damage_speed_multiplier": 0.3,
+    "battery_damage_speed_multiplier": 0.7,
+    "wheel_damage_speed_multiplier": 0.5,
+    "wheel_damage_steering_multiplier": 0.3,
+    "base_friction": 0.98,
+    "wheel_damage_friction_multiplier": 0.7,
+    "collision_damage_chance": 0.1,
+    "entity_collision_damage_chance": 0.2
+  },
+  "parts": {
+    "engine": {
+      "max_durability": 2000,
+      "fuel_consumption_rate": 1,
+      "collision_damage": 5
+    },
+    "wheel": {
+      "max_durability": 1000,
+      "collision_damage": 3,
+      "steering_penalty": 0.7
+    },
+    "seat": {
+      "max_durability": 500,
+      "collision_damage": 2
+    },
+    "battery": {
+      "max_durability": 1500,
+      "collision_damage": 4
+    },
+    "trunk": {
+      "max_durability": 800,
+      "collision_damage": 3
+    },
+    "light": {
+      "max_durability": 300,
+      "collision_damage": 1
+    }
+  }
+}

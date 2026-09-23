@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="modular_vehicle"
+version="1.0.0"
+displayName="Modular Vehicle System"
+description='''
+A modular vehicle system with a 6-seat vehicle, installable parts,
+independent part durability, dynamic collision boxes and JSON-driven
+part definitions.
+'''
+
+[[dependencies.modular_vehicle]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.modular_vehicle]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
